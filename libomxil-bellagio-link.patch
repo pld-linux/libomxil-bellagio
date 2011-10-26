@@ -1,0 +1,11 @@
+--- libomxil-bellagio-0.9.3/src/Makefile.am.orig	2011-05-20 07:28:17.000000000 +0200
++++ libomxil-bellagio-0.9.3/src/Makefile.am	2011-10-25 20:16:26.556388271 +0200
+@@ -7,7 +7,7 @@
+ omxregister_bellagio_SOURCES = omxregister.c common.c common.h
+ omxregister_bellagio_CFLAGS = -DOMXILCOMPONENTSPATH=\"$(plugindir)/\" \
+ 			      -I$(top_srcdir)/include
+-omxregister_bellagio_LDFLAGS = -lomxil-bellagio -L$(builddir)
++omxregister_bellagio_LDADD = libomxil-bellagio.la
+ 
+ lib_LTLIBRARIES = libomxil-bellagio.la
+ libomxil_bellagio_la_SOURCES = component_loader.h \
