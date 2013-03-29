@@ -18,6 +18,7 @@ BuildRequires:	automake
 %{?with_apidocs:BuildRequires:	doxygen}
 BuildRequires:	libtool
 BuildRequires:	sed >= 4.0
+Provides:	OpenMAX-IL = 1.1.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # module references RM_{Deinit,Init} symbols from resource manager
@@ -38,6 +39,7 @@ Summary:	Header files for Bellagio OpenMAX IL library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Bellagio OpenMAX IL
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Provides:	OpenMAX-IL-devel = 1.1.2
 
 %description devel
 Header files for Bellagio OpenMAX IL library.
@@ -50,6 +52,7 @@ Summary:	Static Bellagio OpenMAX IL library
 Summary(pl.UTF-8):	Statyczna biblioteka Bellagio OpenMAX IL
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
+Provides:	OpenMAX-IL-static = 1.1.2
 
 %description static
 Static Bellagio OpenMAX IL library.
