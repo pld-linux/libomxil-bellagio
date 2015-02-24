@@ -6,7 +6,7 @@ Summary:	Bellagio OpenMAX Integration Layer implementation
 Summary(pl.UTF-8):	Implementacja Bellagio standardu OpenMAX Integration Layer
 Name:		libomxil-bellagio
 Version:	0.9.3
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/omxil/%{name}-%{version}.tar.gz
