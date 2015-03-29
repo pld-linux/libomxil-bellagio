@@ -1,12 +1,12 @@
 #
 # Conditional build:
 %bcond_without	apidocs		# do not build and package API docs
-#
+
 Summary:	Bellagio OpenMAX Integration Layer implementation
 Summary(pl.UTF-8):	Implementacja Bellagio standardu OpenMAX Integration Layer
 Name:		libomxil-bellagio
 Version:	0.9.3
-Release:	2
+Release:	3
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/omxil/%{name}-%{version}.tar.gz
@@ -64,6 +64,9 @@ Statyczna biblioteka Bellagio OpenMAX IL.
 Summary:	Bellagio OpenMAX IL API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki Bellagio OpenMAX IL
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API and internal documentation for Bellagio OpenMAX IL library.
