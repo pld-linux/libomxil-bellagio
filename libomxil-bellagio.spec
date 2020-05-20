@@ -6,12 +6,13 @@ Summary:	Bellagio OpenMAX Integration Layer implementation
 Summary(pl.UTF-8):	Implementacja Bellagio standardu OpenMAX Integration Layer
 Name:		libomxil-bellagio
 Version:	0.9.3
-Release:	3
+Release:	4
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/omxil/%{name}-%{version}.tar.gz
 # Source0-md5:	a1de827fdb75c02c84e55f740ca27cb8
 Patch0:		%{name}-link.patch
+Patch1:		%{name}-extern.patch
 URL:		http://omxil.sourceforge.net/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
@@ -77,6 +78,7 @@ Dokumentacja API biblioteki Bellagio OpenMAX IL.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 # unhandled case enum value warnings when using gcc 4.6
 sed -i -e 's/-Werror//' configure.ac

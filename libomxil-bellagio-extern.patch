@@ -1,0 +1,31 @@
+--- libomxil-bellagio-0.9.3/src/omx_reference_resource_manager.h.orig	2011-01-12 08:53:26.000000000 +0100
++++ libomxil-bellagio-0.9.3/src/omx_reference_resource_manager.h	2020-05-20 20:20:47.148613813 +0200
+@@ -49,10 +49,10 @@
+ };
+ 
+ 
+-int globalIndex;
+-NameIndexType *listOfcomponentRegistered;
+-ComponentListType **globalComponentList;
+-ComponentListType **globalWaitingComponentList;
++extern int globalIndex;
++extern NameIndexType *listOfcomponentRegistered;
++extern ComponentListType **globalComponentList;
++extern ComponentListType **globalWaitingComponentList;
+ 
+ OMX_ERRORTYPE RM_RegisterComponent(char *name, int max_components);
+ OMX_ERRORTYPE addElemToList(ComponentListType **list, OMX_COMPONENTTYPE *openmaxStandComp, int index, OMX_BOOL bIsWaiting);
+--- libomxil-bellagio-0.9.3/src/omx_reference_resource_manager.c.orig	2011-01-12 08:53:26.000000000 +0100
++++ libomxil-bellagio-0.9.3/src/omx_reference_resource_manager.c	2020-05-20 20:29:18.915109312 +0200
+@@ -30,6 +30,11 @@
+ #include "base/omx_base_component.h"
+ #include "queue.h"
+ 
++int globalIndex;
++NameIndexType *listOfcomponentRegistered;
++ComponentListType **globalComponentList;
++ComponentListType **globalWaitingComponentList;
++
+ /**
+  * This is the static base pointer of the list
+  */
