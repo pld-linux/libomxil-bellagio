@@ -65,9 +65,7 @@ Statyczna biblioteka Bellagio OpenMAX IL.
 Summary:	Bellagio OpenMAX IL API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki Bellagio OpenMAX IL
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 API and internal documentation for Bellagio OpenMAX IL library.
