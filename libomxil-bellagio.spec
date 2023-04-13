@@ -18,6 +18,7 @@ BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
 %{?with_apidocs:BuildRequires:	doxygen}
 BuildRequires:	libtool
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	sed >= 4.0
 Provides:	OpenMAX-IL = 1.1.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
